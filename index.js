@@ -6,7 +6,10 @@ async function fileSystemOptions() {
   // await fs.writeFile("./app.txt", "Hello World!");
 
   //Read a file
-  const data = await fs.readFile("./app.txt", "utf-8");
-  console.log(data);
+  // const data = await fs.readFile("./app.txt", "utf-8");
+  // console.log(data);
+
+  //Rename a file
+  await fs.rename("./app.txt", "./helper.txt");
 }
 fileSystemOptions();
