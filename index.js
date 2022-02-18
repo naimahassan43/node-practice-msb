@@ -16,7 +16,14 @@ const fs = require("fs");
 
 //Rename a file
 
-fs.rename("./app.txt", "./helper.txt", (err) => {
+// fs.rename("./app.txt", "./helper.txt", (err) => {
+//   if (err) console.log(err);
+//   else console.log("file renamed");
+// });
+
+// Delete a file
+
+fs.unlink("./helper.txt", (err) => {
   if (err) console.log(err);
-  else console.log("file renamed");
+  else console.log("file deleted");
 });
