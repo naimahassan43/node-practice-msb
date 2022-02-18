@@ -9,7 +9,14 @@ const fs = require("fs");
 // });
 
 //Read a file
-fs.readFile("./app.txt", "utf-8", (err, data) => {
+// fs.readFile("./app.txt", "utf-8", (err, data) => {
+//   if (err) console.log(err);
+//   else console.log(data);
+// });
+
+//Rename a file
+
+fs.rename("./app.txt", "./helper.txt", (err) => {
   if (err) console.log(err);
-  else console.log(data);
+  else console.log("file renamed");
 });
