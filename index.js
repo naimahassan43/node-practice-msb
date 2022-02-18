@@ -10,6 +10,9 @@ async function fileSystemOptions() {
   // console.log(data);
 
   //Rename a file
-  await fs.rename("./app.txt", "./helper.txt");
+  // await fs.rename("./app.txt", "./helper.txt");
+
+  // Delete a file
+  await fs.unlink("./helper.txt");
 }
 fileSystemOptions();
