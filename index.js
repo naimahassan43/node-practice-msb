@@ -1,20 +1,10 @@
-//URL module
-const http = require("http");
-const url = require("url");
+//NPM module
 
-// create a server
-const server = http.createServer(async (req, res) => {
-  if (req.url === "/favicon.ico") return;
-  console.log(req.url);
+const validator = require("validator");
 
-  const myUrl = new URL(req.url, "http://localhost:3000/");
-  console.log(myUrl);
-  console.log(myUrl.pathname);
-  console.log(myUrl.searchParams.get("id"));
-  console.log(myUrl.searchParams.get("category"));
-  // Send this data as a response from server
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.end("<h1>Hellooo</h1>");
-});
-
-server.listen(3000);
+// console.log(validator.isEmail("john@gmail.com"));
+// console.log(validator.isJSON(JSON.stringify({ name: "john" })));
+// console.log(validator.isPort("65535")); //0 to 65535
+console.log(
+  validator.isURL("https://www.msbacademy.com/course/javascript-bootcamp/")
+);
